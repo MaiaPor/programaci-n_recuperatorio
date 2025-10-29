@@ -28,8 +28,32 @@ while bandera:
     elif eleccion == 2:
         mostrar = mostrar_lista(vehiculos)
         print(mostrar)
-        
+
     elif eleccion == 3:
         busqueda = input("Ingrese la patente que busca")
         datos = buscar_vehiculo(vehiculos, busqueda)
         print (datos)
+    
+    elif eleccion == 4:
+        pass
+
+    elif eleccion == 5:
+        datos = vehiculo_mas_horas(vehiculos)
+        print(datos)
+
+    elif eleccion == 6:
+        datos = vehiculo_menos_horas(vehiculos)
+        print(datos)
+
+    elif eleccion == 7:
+        datos = cantidad_vehiculos_cuatro_horas(vehiculos)
+        print(datos)
+
+    elif eleccion == 8:
+        datos = promedio(vehiculos)
+        print(f"El promedio total es de: {datos}")
+
+    elif eleccion == 9:
+        datos = vehiculos_ford(vehiculos)
+        print("Hay:", datos, "vehiculos Ford")
+
