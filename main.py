@@ -2,6 +2,7 @@ from recuperatorio_27_8 import *
 #Inicializamos el menù
 
 bandera = True
+vehiculos = []
 
 while bandera:
     print("··· Estacionamiento Patos Center ···")
@@ -21,4 +22,14 @@ while bandera:
     if eleccion == 0:
         bandera = False
     elif eleccion == 1:
-        carga_de_datos()
+        carga = carga_de_datos(vehiculos)
+        vehiculos += [carga]
+
+    elif eleccion == 2:
+        mostrar = mostrar_lista(vehiculos)
+        print(mostrar)
+        
+    elif eleccion == 3:
+        busqueda = input("Ingrese la patente que busca")
+        datos = buscar_vehiculo(vehiculos, busqueda)
+        print (datos)
